@@ -20,12 +20,18 @@ async function getInput() {
     //Message output target
     console.log('Input', targetNumber);
     
+
+    let primeSum = 0;
+    
     for (let i = 2; i <= targetNumber; i++){
         if (isPrime(i)){
-            console.log(i);
+            primeSum += i
         }
     }
+
+    console.log('Output', primeSum);
 }
+
     //function check prime number?
     function isPrime(number){
         if (number <= 1){
