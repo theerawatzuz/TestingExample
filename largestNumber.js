@@ -26,11 +26,11 @@ async function getInput() {
     });
 
     //Join the sorted strings to form the largest number
-    const result = largestNumber.join('');
+    const largestNumberResult = largestNumber.join('');
 
         //Message output 
         console.log('Input', numbersArray);
-        console.log("Output:", result);
+        console.log("Output:", largestNumberResult);
 }
 
 getInput();
