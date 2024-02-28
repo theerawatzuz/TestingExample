@@ -29,7 +29,7 @@ async function getInput() {
     //Message output target
     console.log('Target', targetNumber);
 
-    //Function sum array
+    //Function sum two array
     let found = false;
     for (let i = 0; i < numbersArray.length; i++) {
         for (let j = i + 1; j < numbersArray.length; j++) {
