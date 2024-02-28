@@ -44,7 +44,7 @@ async function getInput() {
     }
 
     //Message output the result
-    console.log('Result:', found);
+    console.log('Output:', found);
 }
 
 getInput();
