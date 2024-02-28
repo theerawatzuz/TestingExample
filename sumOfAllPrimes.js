@@ -22,13 +22,14 @@ async function getInput() {
     
 
     let primeSum = 0;
-    
+
     for (let i = 2; i <= targetNumber; i++){
         if (isPrime(i)){
             primeSum += i
         }
     }
-
+    
+    //Message output primeSum
     console.log('Output', primeSum);
 }
 
