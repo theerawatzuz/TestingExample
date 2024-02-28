@@ -1,27 +1,35 @@
 async function getInput() {
-    process.stdin.setEncoding('utf-8');
-  
     const readline = require('readline').createInterface({
       input: process.stdin,
       output: process.stdout
     });
 
-    //Message for input
-    console.log('Please input number by use spacebar for splice');
+    //Message on program run
+    console.log('Please input numbers separated by space:');
   
     const inputData = await new Promise(resolve => {
-      readline.question('', input => {
-        resolve(input);
-      });
+      readline.question('', input => resolve(input));
     });
+
+    console.log('Please input Target:');
+
+    const targetData = await new Promise(resolve => {
+        readline.question('', input => resolve(input));
+      });
+
   
     readline.close();
 
     const numbersArray = inputData.trim().split(' ').map(Number);
-    
-    //Message output
+
+    const targetNumber = Number(targetData.trim());
+
+    //Message output convert to array
     console.log('Input', numbersArray);
-  }
-  
-  getInput();
-  
+    //Message output target
+    console.log('Target', targetNumber);
+
+
+}
+
+getInput();
