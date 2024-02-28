@@ -13,9 +13,11 @@ async function getInput() {
 
     readline.close();
 
-    //Convert input data to array and custom sort
+    //Convert input data to array 
     const numbersArray = inputData.trim().split(' ').map(Number);
-    numbersArray.sort((a,b) => {
+
+    //Convert Array data to custom sort
+    const numberCustomSort = numbersArray.slice().sort((a,b) => {
         //Sort odd number first
         if(a % 2 !== 0 && b % 2 !== 0){
             return a - b;
@@ -28,13 +30,14 @@ async function getInput() {
         else if (a % 2 !== 0 && b% 2 === 0){
             return -1;
         }
-
         else {
             return 1;
         }
     });
-        //Message output convert to array
+
+        //Message output 
         console.log('Input', numbersArray);
+        console.log('Output', numberCustomSort);
 
 }
 
