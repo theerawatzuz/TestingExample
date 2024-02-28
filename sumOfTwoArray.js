@@ -29,7 +29,22 @@ async function getInput() {
     //Message output target
     console.log('Target', targetNumber);
 
+    //Function sum array
+    let found = false;
+    for (let i = 0; i < numbersArray.length; i++) {
+        for (let j = i + 1; j < numbersArray.length; j++) {
+            if (numbersArray[i] + numbersArray[j] === targetNumber) {
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            break;
+        }
+    }
 
+    //Message output the result
+    console.log('Result:', found);
 }
 
 getInput();
